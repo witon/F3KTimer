@@ -1,0 +1,37 @@
+@startuml
+
+class CompetitionArrangement
+
+class Competition
+class Competitor
+class Round
+class Task
+class TaskLastFlight
+class TaskLastTwo
+class TaskActionLastFlight
+class TaskActionLastTwo
+class Group
+class TaskAction{
+Flight flight
+}
+class RoundAction
+class Flight
+
+Round "1" o-- "*" Group
+RoundAction "1" o-- "*" TaskAction
+TaskAction <|-- TaskActionLastFlight
+TaskAction <|-- TaskActionLastTwo
+
+Task <|-- TaskLastFlight
+Task <|-- TaskLastTwo
+
+Competitor "1" o-- "*" RoundAction
+
+Competition "1" o-- "*" Competitor
+Competition "1" o-- "*" Round
+Round "1" *-- "1" Task
+
+Group "*" o-- "*" Competitor
+
+
+@enduml
