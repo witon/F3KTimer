@@ -2,16 +2,11 @@ package com.laozhu.f3krule;
 
 import java.util.ArrayList;
 
-public class Competitor {
-    ArrayList<RoundAction> roundActions = new ArrayList<>();
-    String name;
+public class Competitor extends Entity {
+    private ArrayList<RoundAction> roundActions = new ArrayList<>();
 
-    void setName(String name){
-        this.name = name;
-    }
-
-    String getName(){
-        return this.name;
+    public Competitor(String name) {
+        super(name);
     }
 
     void addRound(Round round){
@@ -19,7 +14,7 @@ public class Competitor {
     }
 
     public static Competitor newCompetitor(String name){
-        Competitor competitor = new Competitor();
+        Competitor competitor = new Competitor(name);
         competitor.setName(name);
         return competitor;
     }

@@ -3,18 +3,18 @@ package com.laozhu.f3krule;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Competition {
-    private String name = null;
+/**
+ * 管理比赛的信息
+ */
+public class Competition extends Entity {
     ArrayList<Round> rounds = new ArrayList<>();
     HashMap<String, Competitor> competitors = new HashMap<>();
     ArrayList<Group> groups = new ArrayList<>();
 
-    public String getName(){
-        return name;
+    public Competition(String name) {
+        super(name);
     }
-    public Competition(String name){
-        this.name = name;
-    }
+
 
     /**
      * 添加一个轮次
@@ -35,6 +35,11 @@ public class Competition {
 
     }
 
+    /**
+     * 通过名字获取这个比赛的参赛者
+     * @param name
+     * @return Competitor
+     */
     public Competitor getCompetitor(String name){
         return competitors.get(name);
     }

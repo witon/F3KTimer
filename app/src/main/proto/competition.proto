@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.laozhu.proto;
+
+message GetCompetitionResp {
+   string name = 1;
+}
+
+message GetCompetitionReq {
+    string name = 1;
+}
+
+service CompetitionService {
+    rpc getCompetition (GetCompetitionReq) returns (GetCompetitionResp) {}
+}

@@ -7,7 +7,8 @@ public class CompetitorTest {
 
     @Test
     public void setName() {
-        Competitor competitor = new Competitor();
+        Competitor competitor = new Competitor("Jerry");
+        assertEquals("Jerry", competitor.getName());
         competitor.setName("Tom");
         assertEquals("Tom", competitor.getName());
     }

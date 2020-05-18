@@ -1,5 +1,8 @@
 package com.laozhu.f3krule;
 
+/**
+ * 进行比赛的安排
+ */
 public class CompetitionArrangement {
     Competition competition = null;
     int lastRoundId = 0;

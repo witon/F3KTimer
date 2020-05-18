@@ -7,4 +7,20 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_new_competition"
+        android:orderInCategory="101"
+        android:title="New Competition"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_competitor_list"
+        android:orderInCategory="102"
+        android:title="Competitor list"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="103"
+        android:title="Refresh"
+        app:showAsAction="never" />
 </menu>
