@@ -26,7 +26,6 @@ import java.util.List;
 
 import com.laozhu.proto.CompetitionServiceGrpc;
 
-import Proto.CompetitionOuterClass;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
